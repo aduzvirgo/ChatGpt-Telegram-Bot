@@ -1,5 +1,5 @@
 HELP = """**--•Examples--\n \n\n• Explain quantum computing in simple terms
-• Got any creative ideas for a 10 year oldâs birthday?
+• Got any creative ideas for a 10 year olds birthday?
 • How do I make an HTTP request in Javascript?
 \n\n•¸Capabilites\n\n•Remembers what user said earlier in the conversation,
 •A llows user to provide follow-up corrections,
