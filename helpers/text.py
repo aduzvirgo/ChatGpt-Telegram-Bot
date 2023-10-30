@@ -8,7 +8,7 @@ HELP = """**--•Examples--\n \n\n• Explain quantum computing in simple terms
 • Limited knowledge of world and events after 2021
 • may it takes to long for some responses the messages $hello and $genrate me some c++ code can not be treated the same,so depending on your query bot can take  min 3second and max 30 seconds to response
 
-source Code https://github.com/Elphador/ChatGpt-Telegram-Bot
+source Code https://github.com/aduzvirgo/ChatGpt-Telegram-Bot
 **"""
 
 
