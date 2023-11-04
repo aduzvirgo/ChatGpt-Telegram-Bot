@@ -6,7 +6,7 @@ HELP = """**type /help for this menu\n\ntype /mysetting to see your current sett
     \n \n\n or directly ask a question
     + works inline everywhere 
     
-    \n \n\n to upgrade your Api for commercial use, contact us @neuralg or DM @aduzvirgo**"""
+    \n \n\n to upgrade your Api for commercial use, contact us @ethioaiofficial or DM @aduzvirgo**"""
 
 
 
