@@ -1,7 +1,7 @@
 
 import requests
 
-def gpt(hello world):
+def gpt(text):
     url = "http://216.98.10.228:5000/gpt"
 params = {
     "ask": "hello world"
