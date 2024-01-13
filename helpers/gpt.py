@@ -1,11 +1,14 @@
 
 import requests
 
-def gpt(text):
-    url = "https://freegptapi.hop.sh/neural/api"
-    params = {
-    "query":text}
-    response = requests.get(url, params=params)
-    data = response.json()
-    return data['answer']
+def gpt(hello world):
+    url = "http://216.98.10.228:5000/gpt"
+params = {
+    "ask": "hello world"
+}
+
+response = requests.get(url, params=params)
+data = response.json()
+
+print(data)
     
