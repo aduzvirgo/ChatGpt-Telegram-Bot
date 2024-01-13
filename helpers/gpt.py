@@ -1,9 +1,9 @@
 
 import requests
 
-url = "http://216.98.10.228:5000/gpt"
+url = "https://freegptapi.hop.sh/neural/api"
 params = {
-    "ask": "hello world"
+    "query": "hello world"
 }
 
 response = requests.get(url, params=params)
