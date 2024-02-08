@@ -1,7 +1,7 @@
-# codded by t.me/elphad0r
+# codded by t.me/snackshell
 """
-Every Credits dependig on this repo goes to 
-Neural Programmers Offical Authors 
+Every Credits depending on this repo goes to 
+Neural Programmers Official Authors 
 t.me/neuralp
 t.me/neuralg
 t.me/neuraltutor
@@ -9,14 +9,15 @@ demo bot t.me/chatgpt4vbot
    ..... t.me/askgptprobot
 
 """
-from pyrogram import *
+from pyrogram import Client
 from config import *
 
-neural = Client ('neural tutor',
-                api_id=API_ID, 
-                api_hash=API_HASH, 
+neural = Client('neural tutor',
+                api_id=API_ID,
+                api_hash=API_HASH,
                 bot_token=BOT_TOKEN,
                 plugins=dict(root='plugins')
                 )
-                               
-neural.run()                
+
+neural.start()
+neural.idle()
