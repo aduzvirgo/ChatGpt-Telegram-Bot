@@ -1,6 +1,6 @@
 import requests
 
-url = "http://62.72.6.182:6699/gpt"
+url = "http://62.72.6.182:6699/gpt?ask=Hi"
 params = {
     "ask": "hello world"
 }
