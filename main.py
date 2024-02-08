@@ -18,19 +18,12 @@ neural = Client ('neural tutor',
                 plugins=dict(root='plugins')
                 )
 
-user_count = 0
-
 # Command to check the user count
 @neural.on_message(filters.command('users') & filters.private)
 async def users_command(_, message):
+    chat_id = message.chat.id
+    user_count = await neural.get_chat_members_count(chat_id)
     await message.reply(f"Current user count: {user_count}")
-
-# Increment user count on new user chat
-@neural.on_chat_member_updated()
-async def count_new_users(_, message):
-    global user_count
-    if message.new_chat_members:
-        user_count += len(message.new_chat_members)
 
 # Start the bot
 neural.run()
