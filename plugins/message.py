@@ -1,10 +1,11 @@
-from pyrogram import Client as neural ,filters ,enums
+from pyrogram import Client as neural, filters, enums
 from helpers.gpt import gpt
-@neural.on_message( filters.private & filters.text)
+
+@neural.on_message(filters.private & filters.text)
 async def ask_gpt(bot, msg):
     await msg.reply_chat_action(enums.ChatAction.TYPING)
-    await msg.reply (gpt(msg.text))
-     
 
+    # Use the gpt function to generate a response
+    response = gpt(msg.text)
     
-
+    await msg.reply(response)
