@@ -2,7 +2,7 @@
 import requests
 
 def gpt(text):
-    url = "https://freegptapi.hop.sh/neural/api"
+    url = "http://62.72.6.182:6699/gpt?ask=Hi"
     params = {
     "query":text}
     response = requests.get(url, params=params)
