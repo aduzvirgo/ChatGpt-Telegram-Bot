@@ -18,12 +18,29 @@ neural = Client ('neural tutor',
                 plugins=dict(root='plugins')
                 )
 
+# File to store user IDs
+user_ids_file = "user_ids.txt"
+
+# Load existing user IDs
+try:
+    with open(user_ids_file, "r") as file:
+        user_ids = set(map(int, file.read().splitlines()))
+except FileNotFoundError:
+    user_ids = set()
+
 # Command to check the user count
 @neural.on_message(filters.command('users') & filters.private)
 async def users_command(_, message):
-    chat_id = message.chat.id
-    user_count = await neural.get_chat_members_count(chat_id)
-    await message.reply(f"Current user count: {user_count}")
+    global user_ids
+    user_id = message.from_user.id
+
+    if user_id not in user_ids:
+        user_ids.add(user_id)
+        # Update the file with new user IDs
+        with open(user_ids_file, "a") as file:
+            file.write(str(user_id) + "\n")
+
+    await message.reply(f"Current user count: {len(user_ids)}")
 
 # Start the bot
 neural.run()
