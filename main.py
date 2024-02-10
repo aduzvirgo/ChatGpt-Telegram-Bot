@@ -25,7 +25,7 @@ user_count = 0
 async def user_count_command(_, message):
     await message.reply(f"Current user count: {user_count}")
 
-@neural.on_chat_member_updated()
+@neural.on_chat_members_added()
 async def count_new_users(_, message):
     global user_count
     if message.new_chat_members:
