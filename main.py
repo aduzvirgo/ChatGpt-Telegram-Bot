@@ -18,6 +18,5 @@ neural = Client ('neural tutor',
                 bot_token=BOT_TOKEN,
                 plugins=dict(root='plugins')
                 )
-
                                
 neural.run()
